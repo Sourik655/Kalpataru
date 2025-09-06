@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalpataru - AI Farming Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar (Library Section) -->
+  <aside id="library">
+    <h2>📚 Library</h2>
+    <ul id="history"></ul>
+  </aside>
+
+  <!-- Main Chat Area -->
+  <div id="main">
+    <header>
+      <button onclick="toggleLibrary()">📚</button>
+      <h1>🌱 Kalpataru</h1>
+    </header>
+
+    <main id="chat-container">
+      <div id="chat-box"></div>
+    </main>
+
+    <footer>
+      <input type="text" id="user-input" placeholder="Type your question...">
+      <button id="send-btn">Send</button>
+      <button id="voice-btn">🎤</button>
+
+      <!-- Uploads -->
+      <label for="image-upload" class="upload-btn">📷</label>
+      <input type="file" id="image-upload" accept="image/*" onchange="sendImage()">
+
+      <label for="file-upload" class="upload-btn">📂</label>
+      <input type="file" id="file-upload" onchange="sendFile()">
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
